@@ -50,7 +50,6 @@ export function convertToDecimal(number, base) {
     let result = 0;
     const newNumber = number.replace('.', '');
     let power = getPowerIndex(number);
-    console.log(number, power, newNumber, hexaBaseFormat('a'));
     
     for (let i = newNumber.length - 1; i >= 0; i--) {
         result += hexaBaseFormat(newNumber[i]) * Math.pow(base, power);
@@ -86,7 +85,6 @@ export function convertToBinary(value, base) {
         let result = '';
         for (let index = 0; index < binary.length; index++) {
             result += base === 8 ? octToBinary[binary[index]] : hexToBinary[binary[index].toLocaleUpperCase()];
-            console.log(index);
         }
         return result;
     }
@@ -94,7 +92,6 @@ export function convertToBinary(value, base) {
     if (value.includes('.')) {
         const octal = value.slice(0, value.indexOf('.'))
         const fraction = value.slice(value.indexOf('.') + 1 , value.length)
-        console.log(fraction, octal);
         
         return Number.parseFloat(toBinary(octal)) + '.' + toBinary(fraction)
     }else{
@@ -130,7 +127,6 @@ export function convertFromBinary(binaryNumber, base) {
     if (binaryNumber % 1) {
         const binary = binaryNumber.slice(0, binaryNumber.indexOf('.'))
         const fraction = binaryNumber.slice(binaryNumber.indexOf('.')+1 , binaryNumber.length)
-        console.log(binary, fraction);
         return FromBinary(binary, true) + '.' + FromBinary(fraction, false);
     } else {
         return FromBinary(binaryNumber, true);
@@ -187,7 +183,6 @@ function hexaBaseFormat(hexa) {
         return Object.keys(hexaFormat).find(key => hexaFormat[key] === hexa.toLocaleUpperCase())
         
     } else {
-        console.log('number',Number.parseInt(hexa) === NaN);
         return hexaFormat[hexa];
     }
 }

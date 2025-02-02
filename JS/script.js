@@ -2,7 +2,6 @@ import { DisplayError } from "./helper.js";
 import state from "./globalState.js";
 import { handleFirstSelect, handleSecondSelect } from "./controllers.js";
 import { getHandlerFunction } from "./handlers.js";
-import { convertToDecimal } from "./conversions.js";
 
 // Access select elements by ID's 
 const select1 = document.getElementById('select1');
@@ -19,17 +18,17 @@ const clear = document.getElementById("clear");
 const result_text = document.getElementById("result_text");
 
 const menuIcon = document.getElementById('menu-icon');
-const menu = document.getElementById('navmenu');
+const menuWrapper = document.getElementById('menu-wrapper');
 
 // Add event listeners to select to get value on change.
 select1?.addEventListener('change', handleFirstSelect);
 select2?.addEventListener('change', handleSecondSelect);
 
-const menuWidth = menu?.clientWidth;
+const menuWidth = menuWrapper?.clientWidth + 50;
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    menu.style.left = `-${menuWidth}px`
+    menuWrapper.style.left = `-${menuWidth}px`
     numberInput.focus();
 
 });
@@ -49,9 +48,8 @@ convert.addEventListener("click", () => {
         const conversionType = `${firstConversionType}To${secondConversionType}`;
         const convertor = getHandlerFunction(conversionType);
         const inputValue = numberInput.value;
-        const result = convertor(inputValue);
+        const result = convertor ? convertor(inputValue) : null;
         if (result) {
-            console.log(result);
             answerBox.innerHTML = result;
             result_text.innerHTML = `Result of ${firstConversionType} To ${secondConversionType}`
             numberInput.focus()
@@ -76,11 +74,11 @@ numberInput.addEventListener('input', () => {
 })
 
 menuIcon.addEventListener('click', () => {
-    if (menu.style.left === '0px') {
-        menu.style.left = `-${menuWidth}px`
+    if (menuWrapper.style.left === '0px') {
+        menuWrapper.style.left = `-${menuWidth}px`
         menuIcon.src = '/images/open.png'
     } else {
         menuIcon.src = '/images/close.png'
-        menu.style.left = `0px`
+        menuWrapper.style.left = `0px`
     }
 })

@@ -15,7 +15,6 @@
         position: fixed;
         width: 60%;
         height: 100vh;
-        left: 0px;
         top: 50px;
     }
     .navmenu{
@@ -24,6 +23,7 @@
         height: 100%;
         background-color: #fff;
         width: 100%;
+        left: 0px;
         padding: 0;
         margin: 0;
         gap: 0;

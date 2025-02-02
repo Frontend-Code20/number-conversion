@@ -25,8 +25,7 @@ const handlers = {
  * @returns 
  */
 export function getHandlerFunction(type) {
-    console.log(handlers[type]());
-    return handlers[type];  
+    return handlers[type] ? handlers[type] : false;  
 }
 
 // Validate Binary Number
