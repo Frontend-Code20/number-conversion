@@ -1,6 +1,6 @@
 # Number Conversion Tool Using JavaScript
 
-    A powerful and easy-to-use number conversion tool built in JavaScript that allows users to quickly convert numbers between binary, decimal, octal, and hexadecimal formats, both for whole numbers and fractions. This tool has a user-friendly and responsive user interface built in a modern CSS and HTML approach. The structure of the tool directory is organized in separate files using a modular approach for better readability, scalability, and maintainability.
+A powerful and easy-to-use number conversion tool built in JavaScript that allows users to quickly convert numbers between binary, decimal, octal, and hexadecimal formats, both for whole numbers and fractions. This tool has a user-friendly and responsive user interface built in a modern CSS and HTML approach. The structure of the tool directory is organized in separate files using a modular approach for better readability, scalability, and maintainability.
 
 ## 1. Tech Stack
 - JavaScript
@@ -55,12 +55,12 @@
 
 ## 6. Project 
 
-!["Defualt View"](")
+!["Defualt View"](https://github.com/Frontend-Code20/number-conversion/blob/main/images/project_preview/defualt.png)
 
-!["Decimal to Binary"](")
+!["Decimal to Binary"](https://github.com/Frontend-Code20/number-conversion/blob/main/images/project_preview/decimal.png)
 
-!["Error View"](")
+!["Error View"](https://github.com/Frontend-Code20/number-conversion/blob/main/images/project_preview/error.png)
 
-!["Hexadecimal to decimal"](")
+!["Hexadecimal to decimal"](https://github.com/Frontend-Code20/number-conversion/blob/main/images/project_preview/hexa.png)
 
-!["Hexadecimal to octal"](")
+!["Hexadecimal to octal"](https://github.com/Frontend-Code20/number-conversion/blob/main/images/project_preview/hexaOctal.png)
